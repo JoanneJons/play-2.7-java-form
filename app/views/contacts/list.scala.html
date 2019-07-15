@@ -1,0 +1,54 @@
+@(contacts: List[Contact])
+@main("Phone Book") {
+	
+	<h2>Contacts</h2>
+        
+        <script>
+            function del(urlToDelete) {
+                $.ajax({
+                    url: urlToDelete,
+                    method: 'DELETE',
+                    success: function(results) {
+                        //Refresh the page
+                        location.reload();
+                    }
+                });
+            }
+        </script>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Phone</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for(contact <- contacts) {
+			<tr>
+				<td><a href="@routes.Contacts.details(contact.id)">
+					@contact.name
+				</a></td>
+				<td><a href="@routes.Contacts.details(contact.id)">
+					@contact.phone
+				</a></td>
+                                <td>
+                                    <a href="@routes.Contacts.details(contact.id)">
+                                        <i class="icon icon-pencil"></i>
+                                    </a>
+                                    <a onclick="del('@routes.Contacts.delete(contact.id)')">
+                                        <i class="icon icon-trash"></i>
+                                    </a>
+                                    
+                                </td>
+			</tr>
+			}
+			
+		</tbody>
+	</table>
+        <br><br>
+        <a href="@routes.Contacts.newContact()">
+            <i class="icon-plus"></i> Add Contact
+        </a>
+	
+}

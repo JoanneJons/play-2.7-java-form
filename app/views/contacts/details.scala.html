@@ -1,0 +1,15 @@
+@(contactForm: Form[Contact])
+@import helper._
+
+@main("Contact form") {
+    <h1>Contact Form</h1>
+    @helper.form(action = routes.Contacts.save()) {
+        <fieldset>
+            <legend>Contact</legend>
+            @helper.inputText(contactForm("name"), '_label -> "Name")
+            @helper.inputText(contactForm("phone"), '_label -> "Phone")
+        </fieldset>
+    <input type="submit" class="btn btn-primary" value="Save">
+    <a class="btn" href="@routes.Contacts.list()">Cancel</a>
+    }
+}
