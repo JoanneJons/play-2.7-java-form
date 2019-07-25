@@ -6,7 +6,7 @@
     @helper.form(action = routes.Contacts.save()) {
         <fieldset>
             <legend>Contact</legend>
-            @helper.inputText(contactForm("id), '_label -> " ", 'style -> "display: none")
+            @helper.inputText(contactForm("id"), '_label -> " ", 'style -> "display: none")
             @helper.inputText(contactForm("name"), '_label -> "Name")
             @helper.inputText(contactForm("phone"), '_label -> "Phone")
         </fieldset>
