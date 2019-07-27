@@ -8,6 +8,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean)
 
 libraryDependencies ++= Seq(
   guice,
+  jdbc,
   "com.h2database" % "h2" % "1.4.192",
   "mysql" % "mysql-connector-java" % "5.1.41",
   "org.glassfish.jaxb" % "jaxb-core" % "2.3.0.1",
