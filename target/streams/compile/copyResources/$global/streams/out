@@ -1,7 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mjons/work/Jo/Play/play-2.7-java-form/conf/application.conf,/Users/mjons/work/Jo/Play/play-2.7-java-form/target/scala-2.13/classes/application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mjons/work/Jo/Play/play-2.7-java-form/conf/evolutions,/Users/mjons/work/Jo/Play/play-2.7-java-form/target/scala-2.13/classes/evolutions)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mjons/work/Jo/Play/play-2.7-java-form/conf/evolutions/default,/Users/mjons/work/Jo/Play/play-2.7-java-form/target/scala-2.13/classes/evolutions/default)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mjons/work/Jo/Play/play-2.7-java-form/conf/evolutions/default/1.sql,/Users/mjons/work/Jo/Play/play-2.7-java-form/target/scala-2.13/classes/evolutions/default/1.sql)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mjons/work/Jo/Play/play-2.7-java-form/conf/logback.xml,/Users/mjons/work/Jo/Play/play-2.7-java-form/target/scala-2.13/classes/logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mjons/work/Jo/Play/play-2.7-java-form/conf/routes,/Users/mjons/work/Jo/Play/play-2.7-java-form/target/scala-2.13/classes/routes)[0m
