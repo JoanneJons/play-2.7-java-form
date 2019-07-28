@@ -29,9 +29,9 @@ public class Contacts extends Controller {
         return ok(views.html.contacts.list.render(contacts));
     }
     
-    public Result newContact() { //Show a blank product list
+    public Result newContact() { //Show a new contact form
 
-        return ok(views.html.contacts.details.render(contactForm));
+        return ok(views.html.contacts.details.render(contactForm, "New Contact"));
     }
 
     public Result details(Long Id) { //Show a contact edit form
@@ -42,7 +42,7 @@ public class Contacts extends Controller {
         }
         
         Form<Contact> filledForm = contactForm.fill(contact);
-        return ok(views.html.contacts.details.render(filledForm));
+        return ok(views.html.contacts.details.render(filledForm, "Edit Contact"));
     }
     
     public Result save() { //Save a contact
@@ -50,7 +50,7 @@ public class Contacts extends Controller {
         Form<Contact> boundForm = contactForm.bindFromRequest();
         if(boundForm.hasErrors()) {
             flash("error", "Please correct the form below. ");
-            return badRequest(views.html.contacts.details.render(boundForm));
+            return badRequest(views.html.contacts.details.render(boundForm, "Validation Error"));
         }
 
         Contact contact = boundForm.get();

@@ -16,39 +16,36 @@
             }
         </script>
 
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Phone</th>
-			</tr>
-		</thead>
-		<tbody>
+	
 			@for(contact <- contacts) {
-			<tr>
-				<td><a href="@routes.Contacts.details(contact.id)">
-					@contact.name
-				</a></td>
-				<td><a href="@routes.Contacts.details(contact.id)">
-					@contact.phone
-				</a></td>
-                                <td>
+            <div class="row">
+                <div class="col-sm-4">
+				    <a href="@routes.Contacts.details(contact.id)">
+					    @contact.name
+				    </a>
+                </div>
+                <div class="col-sm-4">
+				    
+					    @contact.phone
+				    </a>
+                </div>
+                            <div class="col-sm-4">
                                     <a href="@routes.Contacts.details(contact.id)">
-                                        <i class="icon icon-pencil"></i>
+                                        <i class="glyphicon glyphicon-pencil"></i>
                                     </a>
                                     <a onclick="del('@routes.Contacts.delete(contact.id)')">
-                                        <i class="icon icon-trash"></i>
+                                        <i class="glyphicon glyphicon-trash"></i>
                                     </a>
-                                    
-                                </td>
-			</tr>
+                            </div>
+                                
+			</div>
 			}
 			
 		</tbody>
 	</table>
         <br><br>
         <a href="@routes.Contacts.newContact()">
-            <i class="icon-plus"></i> Add Contact
+            <i class="glyphicon glyphicon-plus"></i> Add Contact
         </a>
 	
 }
