@@ -12,7 +12,7 @@
     In the folder /app/controllers, under the controllers package, add a controller called Contacts.java which extends the Controller class. (play.mvc.Controller)
   </li><br  />
   <li><strong>Add methods to the Controller</strong><br />
-    Add the following public methods to Contacts class : <br />
+    Add the following public methods to Contacts class : 
     <ul>
       <code>
       <li>public Result list() <em>List all contacts</em></li>
