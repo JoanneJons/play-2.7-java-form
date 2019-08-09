@@ -45,4 +45,13 @@
     </ul>
     Create public getters and setters for the above 3 attributes and create a Finder object.
   </li>
+  <li><strong>Map Contact enitity using Ebean</strong><br />
+  <ul>
+    <li>Import io.ebean.* and javax.persistence.* in Contact.java</li>
+    <li>Annotate Contact as @Entity, Id as @Id and name & phone as @Constraints.required.   (play.data.validation.Constraints)</li>
+    <li>Assign database configuration driver, url, username & password in /conf/application.conf</li>
+    <li>Add jdbc library dependency and ebean dependency in build.sbt</li>
+    <li>Add sbt plugin for ebean in /project/target/plugins.sbt</li>
+  </ul>
+  </li>
   
