@@ -55,4 +55,51 @@
     <li>Add sbt plugin for ebean in <code>/project/target/plugins.sbt</code></li>
   </ul>
   </li>
+  <li><strong>Create the list template</strong><br />
+  <ul>
+    <li>The /app/views folder now contains <code>index.scala.html</code> and <code>main.scala.html</code>. Create a new folder called ‘contacts’ and create a new view template <code>list.scala.html</code></li>
+    <li>Pass contacts as a parameter to the template. <code>@(contacts: List[Contact]</code></li>
+    <li>Pass the entire view to the <code>@content</code> of the main view</li>
+    <li>Format the page using Bootstrap. Add the bootstrap files to <code>/app/bootstrap</code><br  />https://getbootstrap.com/docs/4.3/getting-started/download/</li>
+  </ul>
+  </li>
+  <li><strong>Render the list template</strong><br />
+  Call <code>find.all()</code> to get the entire list of contacts from the database and render the list. Pass the rendered list to the list template using <code>ok()</code>
+  </li>
+  <li><strong>Add the Contact form </strong><br />
+  <ul>
+    <li>Create a view template <code>details.scala.html</code> in <code>/app/views/contacts</code></li>
+    <li>Pass <code>contactForm</code> and <code>action</code> as parameters</li>
+    <li>Format the template using Bootstrap</li>
+  </ul>
+ </li>
+ <li><strong>Construct and render the Contact form object</strong><br />
+  <ul>
+    <li>Create a dependency injection<br />
+    <code>
+      public Contacts(FormFactory formFactory) { this.contactForm = formFactory.form(Contact.class); }
+      </code></li>
+    <li>Create a <code>Form<Contact></code> object and render the same and pass it to the details template using <code>ok()</code> for a New Contact form. </li>
+    <li>Create a <code>From<Contact></code> object and use <code>fill</code> to get the details of the contact with the given Id. Render the same and pass it to the details template using <code>ok</code> for an Edit Contact form</li>
+  </ul>
+ </li>
+ <li><strong>Handle the form submission</strong><br />
+  <ul>
+    <li>Check for validation errors</li>
+    <li>If the object already has an id, call <code>update()</code>, else call <code>save()</code></li>
+    <li>Redirect to the list view</li>
+  </ul>
+ </li>
+ <li><strong>The Delete action</strong><br />
+  <ul>
+    <li>With a RESTful interface, this should be a DELETE operation. Use JavaScript to send a DELETE request.</li>
+    <li>Add a DELETE route to /conf/routes<br />
+      <code>DELETE    /contacts/:id   controllers.Contacts.delete(id: Long)</code></li>
+    <li>The <code>Contacts.delete()</code> method finds the contact by Id and calls <code>delete()</code></li>
+  </ul>
+ </li>
+ 
+  
+ 
+  
   
