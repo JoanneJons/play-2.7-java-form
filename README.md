@@ -13,7 +13,8 @@
   </li><br  />
   <li><strong>Add methods to the Controller</strong><br />
     Add the following public methods to Contacts class : 
-      <pre><code>public Result list() { } //List all contacts <br />
+      <pre><code>
+      public Result list() { } //List all contacts <br />
       public Result newContact() { } //Show a blank contact form <br />
       public Result details(Long id) { } //Show a contact edit form <br />
       public Result save() { } //Save a contact</code></pre>
