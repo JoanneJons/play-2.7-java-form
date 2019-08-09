@@ -9,7 +9,7 @@
     <code>sbt new playframework/play-java-seed.g8</code> <br />
     https://www.playframework.com/documentation/2.7.x/NewApplication</li> <br  />
   <li><strong>Create a Controller class</strong><br />
-    In the folder /app/controllers, under the controllers package, add a controller called Contacts.java which extends the Controller class. (play.mvc.Controller)
+    In the folder /app/controllers, under the controllers package, add a controller called Contacts.java which extends the Controller class. (<code>play.mvc.Controller</code>)
   </li><br  />
   <li><strong>Add methods to the Controller</strong><br />
     Add the following public methods to Contacts class : 
@@ -47,11 +47,12 @@
   </li>
   <li><strong>Map Contact enitity using Ebean</strong><br />
   <ul>
-    <li>Import io.ebean.* and javax.persistence.* in Contact.java</li>
-    <li>Annotate Contact as @Entity, Id as @Id and name & phone as @Constraints.required.   (play.data.validation.Constraints)</li>
-    <li>Assign database configuration driver, url, username & password in /conf/application.conf</li>
-    <li>Add jdbc library dependency and ebean dependency in build.sbt</li>
-    <li>Add sbt plugin for ebean in /project/target/plugins.sbt</li>
+    <li>Import <code>io.ebean.*</code> and <code>javax.persistence.*</code> in Contact.java</li>
+    <li>Annotate Contact as <code>@Entity</code>, Id as <code>@Id</code> and name & phone as <code>@Constraints.required</code>.   (<code>play.data.validation.Constraints</code>)</li>
+    <li>Assign database configuration driver, url, username & password in <code>/conf/application.conf</code>
+    </li>
+    <li>Add jdbc library dependency and ebean dependency in <code>build.sbt</code></li>
+    <li>Add sbt plugin for ebean in <code>/project/target/plugins.sbt</code></li>
   </ul>
   </li>
   
