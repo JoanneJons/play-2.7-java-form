@@ -14,10 +14,12 @@
   <li><strong>Add methods to the Controller</strong><br />
     Add the following public methods to Contacts class : <br />
     <ul>
+      <code>
       <li>public Result list() <em>List all contacts</em></li>
       <li>public Result newContact() <em>Show a blank contact form</em></li>
       <li>public Result details(Long id) <em>Show a contact edit form</em></li>
       <li>public Result save() <em>Save a contact</em></li>
+      </code>
       For the time being, make all the methods return TODO()
     </ul>
   </li><br  />
