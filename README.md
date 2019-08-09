@@ -6,7 +6,7 @@
   <li><strong>Install sbt</strong> : https://www.scala-sbt.org/release/docs/Setup.html</li><br  />
   <li><strong>Create a Play project</strong> : <br />
     Create a new project using a giter8 template : <br />
-    <code>sbt new playframework/play-java-seed.g8</code> <br />
+    <pre><code>sbt new playframework/play-java-seed.g8</code> <br />
     https://www.playframework.com/documentation/2.7.x/NewApplication</li> <br  />
   <li><strong>Create a Controller class</strong><br />
     In the folder /app/controllers, under the controllers package, add a controller called Contacts.java which extends the Controller class. (<code>play.mvc.Controller</code>)
