@@ -6,22 +6,22 @@
   <li><strong>Install sbt</strong> : https://www.scala-sbt.org/release/docs/Setup.html</li><br  />
   <li><strong>Create a Play project</strong> : <br />
     Create a new project using a giter8 template : <br />
-    <pre><code>sbt new playframework/play-java-seed.g8</code></pre> <br />
+    <pre><code>sbt new playframework/play-java-seed.g8</code></pre>
     https://www.playframework.com/documentation/2.7.x/NewApplication</li> <br  />
   <li><strong>Create a Controller class</strong><br />
     In the folder /app/controllers, under the controllers package, add a controller called Contacts.java which extends the Controller class. (<code>play.mvc.Controller</code>)
   </li><br  />
   <li><strong>Add methods to the Controller</strong><br />
     Add the following public methods to Contacts class : 
-    <ul>
+      <pre>
       <code>
-      <li>public Result list() <em>List all contacts</em></li>
-      <li>public Result newContact() <em>Show a blank contact form</em></li>
-      <li>public Result details(Long id) <em>Show a contact edit form</em></li>
-      <li>public Result save() <em>Save a contact</em></li>
+      public Result list() { } //List all contacts <br />
+      public Result newContact() { } //Show a blank contact form <br />
+      public Result details(Long id) { } //Show a contact edit form <br />
+      public Result save() { } //Save a contact
       </code>
+      </pre>
       For the time being, make all the methods return TODO()
-    </ul>
   </li><br  />
   <li><strong>Add routes</strong><br />
     Go to /conf/routes and add the following routes<br />
