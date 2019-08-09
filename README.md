@@ -24,11 +24,11 @@
     </ul>
   </li><br  />
   <li><strong>Add routes</strong><br />
-    Go to /conf/routes and add the following routes
-      <code>GET   /contacts       controllers.HomeController.index <br /></code>
-      <code>GET   /contacts/      controllers.Contacts.list() <br /></code
-      <code>GET   /contacts/new	  controllers.Contacts.newContact() <br /></code
-      <code>GET   /contacts/:id		controllers.Contacts.details(id: Long) <br /></code
-      POST	/contacts/		  controllers.Contacts.save() <br /></code>  
+    Go to /conf/routes and add the following routes<br />
+      <code>GET   /contacts       controllers.HomeController.index </code></br />
+      <code>GET   /contacts/      controllers.Contacts.list() </code><br />
+      <code>GET   /contacts/new	  controllers.Contacts.newContact() </code><br />
+      <code>GET   /contacts/:id		controllers.Contacts.details(id: Long) </code><br />
+      <code>POST	/contacts/		  controllers.Contacts.save() </code><br  />
   </li>
   
